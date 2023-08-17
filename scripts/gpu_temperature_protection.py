@@ -49,7 +49,6 @@ class GPUTemperatureProtection(scripts.Script):
     
     @staticmethod
     def get_cpu_temperature():
-        
         pythoncom.CoInitialize()
         w = wmi.WMI(namespace="root\OpenHardwareMonitor")
         temperature_infos = w.Sensor()
@@ -59,7 +58,6 @@ class GPUTemperatureProtection(scripts.Script):
         cputemp = 0
         for sensor in temperature_infos:
             if sensor.SensorType=='Temperature':
-                #temperature=(sensor.Name, sensor.Value)
                 if sensor.Name.startswith("CPU"):
                     cputemp = sensor.Value
         return cputemp
