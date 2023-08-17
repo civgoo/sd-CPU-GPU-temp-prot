@@ -1,6 +1,6 @@
 # CPU/GPU temperature protection
 ### Pause image generation when CPU or GPU temperature exceeds threshold
-this extension uses nvidia-smi to monitor CPU/GPU temperature at the end of each step, if temperature exceeds threshold pause image generation until criteria are met.
+This extension uses nvidia-smi to monitor CPU/GPU temperature at the end of each step, if temperature exceeds threshold pause image generation until criteria are met.
 
 ## Requirements
 Nvidia GPU
