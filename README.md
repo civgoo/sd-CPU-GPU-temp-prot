@@ -1,9 +1,13 @@
-# GPU temperature protection
-### Pause image generation when GPU temperature exceeds threshold
-this extension uses nvidia-smi to monitor GPU temperature at the end of each step, if temperature exceeds threshold pause image generation until criteria are met.
+# CPU/GPU temperature protection
+### Pause image generation when CPU or GPU temperature exceeds threshold
+this extension uses nvidia-smi to monitor CPU/GPU temperature at the end of each step, if temperature exceeds threshold pause image generation until criteria are met.
 
 ## Requirements
 Nvidia GPU
+Open Hardware Monitor
+https://openhardwaremonitor.org/downloads/ 
+
+This extension was only tested and developed for windows OS. It will likely not work on other OS due to the use of wmi package.
 
 ## Installation
 - method 1: Install using extensions tab `Available` extensions
