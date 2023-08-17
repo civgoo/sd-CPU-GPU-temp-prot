@@ -47,4 +47,4 @@ Settings can be found at `Setting` > `CPU-GPU Temperature`
 
 ## Notes
 - Temperature unit Celsius, Time unit seconds
-- To be honest I don't recommend anyone using this extension, if your GPU is having temperature issues and don't have the means to improve the cooling, then recommend using software like MSI afterburner to undervolt or further power limit or thermal limit the GPU.
+- This extension will greatly increase the image generation time depending on the settings. Only use this when it is absolutely necessary.
