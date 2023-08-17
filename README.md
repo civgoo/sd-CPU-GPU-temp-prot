@@ -14,7 +14,7 @@ This extension was only tested and developed for windows OS. It will likely not 
 - method 1: Install using extensions tab `Available` extensions
 - method 2: Install using extensions tab `Install from URL` by manually copying the repository URL
 ```
-https://github.com/asd417/stable-diffusion-webui-GPU-temperature-protection
+https://github.com/civgoo/sd-CPU-GPU-temp-prot
 ```
 
 ## Setting
