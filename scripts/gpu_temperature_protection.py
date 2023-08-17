@@ -72,12 +72,9 @@ class GPUTemperatureProtection(scripts.Script):
                 gpu_core_temp = GPUTemperatureProtection.get_gpu_temperature()
                 cpu_temp = GPUTemperatureProtection.get_cpu_temperature()
                 if gpu_core_temp > shared.opts.gpu_temps_sleep_sleep_temp or cpu_temp > shared.opts.cpu_temps_sleep_sleep_temp:
-
-                    if shared.opts.gpu_temps_sleep_print:
-                        print(f'\n\nGPU Temperature: {gpu_core_temp}')
-
-                    if shared.opts.cpu_temps_sleep_print:
-                        print(f'\n\nCPU Temperature: {cpu_temp}')
+                    
+                    if shared.opts.gpu_temps_sleep_print or shared.opts.cpu_temps_sleep_print:
+                        print(f'\n\nPausing Generation for Device Protection')
 
                     time.sleep(shared.opts.gpu_temps_sleep_sleep_time)
 
