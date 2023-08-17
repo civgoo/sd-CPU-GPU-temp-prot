@@ -4,6 +4,7 @@ this extension uses nvidia-smi to monitor CPU/GPU temperature at the end of each
 
 ## Requirements
 Nvidia GPU
+
 Open Hardware Monitor
 https://openhardwaremonitor.org/downloads/ 
 
