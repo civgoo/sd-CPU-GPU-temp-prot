@@ -4,6 +4,7 @@ import gradio as gr
 import subprocess
 import time
 
+import pythoncom
 import wmi
 
 shared.options_templates.update(shared.options_section(('CPU_GPU_temperature_protection', "CPU-GPU Temperature"), {
@@ -31,6 +32,7 @@ class GPUTemperatureProtection(scripts.Script):
         return scripts.AlwaysVisible
 
     def process(self, p, *args):
+        
         if shared.opts.gpu_temps_sleep_enable:
             setattr(KDiffusionSampler, "callback_state", GPUTemperatureProtection.gpu_temperature_protection_decorator(KDiffusionSampler.callback_state))
 
@@ -47,6 +49,8 @@ class GPUTemperatureProtection(scripts.Script):
     
     @staticmethod
     def get_cpu_temperature():
+        
+        pythoncom.CoInitialize()
         w = wmi.WMI(namespace="root\OpenHardwareMonitor")
         temperature_infos = w.Sensor()
         if temperature_infos == []:
