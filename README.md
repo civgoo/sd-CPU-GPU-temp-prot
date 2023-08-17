@@ -18,7 +18,7 @@ https://github.com/asd417/stable-diffusion-webui-GPU-temperature-protection
 ```
 
 ## Setting
-Settings can be found at `Setting` > `GPU Temperature`
+Settings can be found at `Setting` > `CPU-GPU Temperature`
 
 - `GPU temperature monitor minimum interval`
     - checking temperature too often will reduce image generation performance
@@ -41,6 +41,9 @@ Settings can be found at `Setting` > `GPU Temperature`
 - `GPU device index`
     - selecting the correct temperature reading for multi GPU systems
     - in most cases and for single GPU system this value should be `0`
+ 
+- Same settings for CPU as well.
+- If you have the original extension installed, the gpu settings will only appear on the original extension's setting page
 
 ## Notes
 - Temperature unit Celsius, Time unit seconds
