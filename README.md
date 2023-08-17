@@ -1,19 +1,24 @@
-# GPU temperature protection
-### Pause image generation when GPU temperature exceeds threshold
-this extension uses nvidia-smi to monitor GPU temperature at the end of each step, if temperature exceeds threshold pause image generation until criteria are met.
+# CPU/GPU temperature protection
+### Pause image generation when CPU or GPU temperature exceeds threshold
+this extension uses nvidia-smi to monitor CPU/GPU temperature at the end of each step, if temperature exceeds threshold pause image generation until criteria are met.
 
 ## Requirements
 Nvidia GPU
+
+Open Hardware Monitor
+https://openhardwaremonitor.org/downloads/ 
+
+This extension was only tested and developed for windows OS. It will likely not work on other OS due to the use of wmi package.
 
 ## Installation
 - method 1: Install using extensions tab `Available` extensions
 - method 2: Install using extensions tab `Install from URL` by manually copying the repository URL
 ```
-https://github.com/w-e-w/stable-diffusion-webui-GPU-temperature-protection.git
+https://github.com/asd417/stable-diffusion-webui-GPU-temperature-protection
 ```
 
 ## Setting
-Settings can be found at `Setting` > `GPU Temperature`
+Settings can be found at `Setting` > `CPU-GPU Temperature`
 
 - `GPU temperature monitor minimum interval`
     - checking temperature too often will reduce image generation performance
@@ -36,7 +41,10 @@ Settings can be found at `Setting` > `GPU Temperature`
 - `GPU device index`
     - selecting the correct temperature reading for multi GPU systems
     - in most cases and for single GPU system this value should be `0`
+ 
+- Same settings for CPU as well.
+- If you have the original extension installed, the gpu settings will only appear on the original extension's setting page
 
 ## Notes
 - Temperature unit Celsius, Time unit seconds
-- To be honest I don't recommend anyone using this extension, if your GPU is having temperature issues and don't have the means to improve the cooling, then recommend using software like MSI afterburner to undervolt or further power limit or thermal limit the GPU.
+- This extension will greatly increase the image generation time depending on the settings. Only use this when it is absolutely necessary.
