@@ -6,7 +6,7 @@ import time
 
 import wmi
 
-shared.options_templates.update(shared.options_section(('GPU_temperature_protection', "GPU Temperature"), {
+shared.options_templates.update(shared.options_section(('CPU_GPU_temperature_protection', "CPU-GPU Temperature"), {
     "gpu_temps_sleep_enable": shared.OptionInfo(True, "Enable GPU temperature protection"),
     "gpu_temps_sleep_print": shared.OptionInfo(True, "Print GPU Core temperature while sleeping in terminal"),
     "gpu_temps_sleep_minimum_interval": shared.OptionInfo(5.0, "GPU temperature monitor minimum interval", gr.Number).info("won't check the temperature again until this amount of seconds have passed"),
